@@ -227,12 +227,18 @@
             <h1 class="title is-1 publication-title">[CVPR 2026 Findings] ForgeDreamer: Industrial Text-to-3D Generation with Multi-Expert LoRA and Cross-View Hypergraph</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=73M4uPoAAAAJ&hl=en" target="_blank">Junhao Cai</a>,</span>
-                <span class="author-block">Deyu Zeng,</span>
-                <span class="author-block">Junhao Pang,</span>
-                <span class="author-block">Lini Li,</span>
-                <span class="author-block">Zongze Wu,</span>
-                <span class="author-block">Xiaopin Zhong</span>
+                <a href="https://scholar.google.com/citations?user=73M4uPoAAAAJ&hl=en" target="_blank">Junhao Cai</a><sup>1,*</sup>,</span>
+                <span class="author-block">Deyu Zeng<sup>1,*</sup>,</span>
+                <span class="author-block">Junhao Pang<sup>1</sup>,</span>
+                <span class="author-block">Lini Li<sup>1</sup>,</span>
+                <span class="author-block">Zongze Wu<sup>1</sup>,</span>
+                <span class="author-block">Xiaopin Zhong<sup>1,†</sup></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Industrial AI Research</span>
+                    <span class="author-block eql-cntrb"><sup>*</sup>Equal contribution.</span>
+                    <span class="author-block eql-cntrb"><sup>†</sup>Corresponding author.</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -311,7 +317,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present <strong>ForgeDreamer</strong>, a novel framework tailored for industrial text-to-3D generation. By integrating Multi-Expert LoRA and a Cross-View Hypergraph, ForgeDreamer effectively captures the intricate geometric structures, strict topologies, and precise physical properties required for high-fidelity industrial parts.
+            Industrial text-to-3D generation is challenging due to strict geometric constraints, fine-grained topology requirements, and strong demands on structural consistency. We present <strong>ForgeDreamer</strong>, a framework tailored for high-fidelity industrial asset generation that combines Multi-Expert LoRA distillation with Cross-View Hypergraph enhancement. Multi-Expert LoRA improves domain-specific feature adaptation across diverse part categories, while the Cross-View Hypergraph explicitly models inter-view dependencies to preserve global coherence and local detail simultaneously. Extensive experiments on representative industrial components demonstrate that ForgeDreamer consistently improves geometry quality, topology faithfulness, and visual realism over strong baselines, providing a practical solution for industrial design prototyping and digital-twin content creation.
           </p>
         </div>
       </div>
@@ -325,6 +331,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3 has-text-centered">Industrial Cases (All GIFs)</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
          <img src="static/videos/screw_new.gif" alt="Screw generation result" loading="lazy"/>
@@ -347,10 +354,34 @@
      <div class="item">
        <img src="static/videos/resistor.gif" alt="Resistor generation result" loading="lazy"/>
        <h2 class="subtitle has-text-centered">
-        Generated resistor result.
+         Generated resistor result.
+       </h2>
+     </div>
+     <div class="item">
+       <img src="static/videos/gasket.gif" alt="Gasket generation result" loading="lazy"/>
+       <h2 class="subtitle has-text-centered">
+         Generated gasket result.
        </h2>
     </div>
-  </div>
+    <div class="item">
+      <img src="static/videos/green_light_diode.gif" alt="Green light diode generation result" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Generated green light diode result.
+      </h2>
+   </div>
+   <div class="item">
+    <img src="static/videos/red_light_diode.gif" alt="Red light diode generation result" loading="lazy"/>
+    <h2 class="subtitle has-text-centered">
+      Generated red light diode result.
+    </h2>
+ </div>
+ <div class="item">
+  <img src="static/videos/nail.gif" alt="Nail generation result" loading="lazy"/>
+  <h2 class="subtitle has-text-centered">
+    Generated nail result.
+  </h2>
+</div>
+   </div>
 </div>
 </div>
 </section>
@@ -359,58 +390,18 @@
 
 
 
-<!-- Method video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Method Video</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <img src="static/videos/gasket.gif" alt="ForgeDreamer method result on gasket" loading="lazy"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End method video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">More Industrial Cases</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/videos/green_light_diode.gif" alt="Green light diode generation result" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">Generated green light diode result.</h2>
-        </div>
-        <div class="item">
-          <img src="static/videos/red_light_diode.gif" alt="Red light diode generation result" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">Generated red light diode result.</h2>
-        </div>
-        <div class="item">
-          <img src="static/videos/nail.gif" alt="Nail generation result" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">Generated nail result.</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Paper & Supplement</h2>
+      <h2 class="title">Paper, Pipeline & Supplement</h2>
+      <p class="has-text-centered" style="margin-bottom: 1rem;">
+        <a href="static/pdfs/pipeline.pdf" target="_blank">Pipeline PDF</a> ·
+        <a href="https://arxiv.org/pdf/2603.09266.pdf" target="_blank">Paper PDF</a> ·
+        <a href="static/pdfs/lora_comparsion_CVPR.pdf" target="_blank">Supplement PDF</a>
+      </p>
 
-      <iframe  src="static/pdfs/lora_comparsion_CVPR.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/pipeline.pdf" width="100%" height="550">
           </iframe>
         
       </div>
