@@ -254,12 +254,15 @@ body {
 }
 
 .results-carousel {
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  overflow: visible;
   padding: 1rem 0;
 }
 
 .results-carousel .item {
-  margin: 1rem;
+  margin: 0;
   overflow: hidden;
   padding: 1.5rem;
   font-size: 0;
@@ -643,7 +646,6 @@ code {
   }
   
   .results-carousel .item {
-    margin: 0.5rem;
     padding: 1rem;
   }
   
@@ -748,6 +750,5 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
 
 
